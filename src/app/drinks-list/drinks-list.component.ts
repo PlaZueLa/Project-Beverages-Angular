@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Drink } from './drink'
 @Component({
   selector: 'app-drinks-list',
   templateUrl: './drinks-list.component.html',
@@ -7,13 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrinksListComponent implements OnInit {
 
-  drink = {
+  drinks: Drink[] = [
+   {
     "name": "Coca Cola",
     "type": "Gaseosa",
     "price": 350,
-    "stock": 6,
-    "image": "assets/img/cocacola.jpg"
-  }
+    "taste": "Coca",
+    "stock": 7,
+    "image": "assets/img/cocacola.jpg",
+    clearance: false,
+  },
+  {
+    "name": "Levite",
+    "type": "Agua saborizada",
+    "price": 225,
+    "taste": "Manzana",
+    "stock": 5,
+    "image": "assets/img/cocacola.jpg",
+    clearance: true,
+  },
+  {
+    "name": "Baggio",
+    "type": "Jugo",
+    "price": 210,
+    "taste": "Multifruta",
+    "stock": 0,
+    "image": "assets/img/cocacola.jpg",
+    clearance: false,
+  },
+];
+
   constructor() { }
 
   ngOnInit(): void {
