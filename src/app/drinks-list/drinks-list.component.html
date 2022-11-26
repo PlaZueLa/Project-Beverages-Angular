@@ -7,16 +7,22 @@
             <th>Precio</th>
             <th>Sabor</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let drink of drinks" [ngClass]="{'clearance': drink.clearance}">
-            <td><img [src]="drink.image" [alt]="drink.name"></td>
+            <td><img width="90" clas="img-thumbnail" [src]="drink.image" [alt]="drink.name"></td>
             <td>{{drink.name}}</td>
             <td>{{drink.type}}</td>
             <td>{{drink.price | currency}}</td>
             <td>{{drink.taste}}</td>
-            <td *ngIf="drink.stock==0">SIN STOCK</td>
+            <td><span class="badge bg-secondary" *ngIf="drink.stock==0">SIN STOCK</span></td>
+            <td><button class="btn btn-primary btn-sm" (click)="downQuantity(drink)">-</button>
+
+                <input type="text" [(ngModel)]="drink.quantity"
+                (keyup)="changeQuantity($event, drink)">
+                <button class="btn btn-primary btn-sm" (click)="upQuantity(drink)">+</button></td>
         </tr>
        
     </tbody>

@@ -5,5 +5,6 @@ export interface Drink {
  stock: number;
  taste: string;
  image: string; 
- clearance: boolean;  
+ clearance: boolean; 
+ quantity: number; 
 }

@@ -13,18 +13,20 @@ export class DrinksListComponent implements OnInit {
     "type": "Gaseosa",
     "price": 350,
     "taste": "Coca",
-    "stock": 7,
+    "stock": 5,
     "image": "assets/img/cocacola.jpg",
     clearance: false,
+    quantity: 0,
   },
   {
     "name": "Levite",
     "type": "Agua saborizada",
     "price": 225,
     "taste": "Manzana",
-    "stock": 5,
+    "stock": 7,
     "image": "assets/img/cocacola.jpg",
     clearance: true,
+    quantity: 0,
   },
   {
     "name": "Baggio",
@@ -34,6 +36,7 @@ export class DrinksListComponent implements OnInit {
     "stock": 0,
     "image": "assets/img/cocacola.jpg",
     clearance: false,
+    quantity: 0,
   },
 ];
 
@@ -42,4 +45,17 @@ export class DrinksListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upQuantity(drink: Drink): void {
+    if(drink.quantity < drink.stock)
+    drink.quantity++;
+  }
+
+
+  downQuantity(drink: Drink): void {
+    if(drink.quantity > 0)
+    drink.quantity--;
+  }
+  changeQuantity(event:any, drink: Drink): void {
+ console.log(event.key)
+  }
 }
