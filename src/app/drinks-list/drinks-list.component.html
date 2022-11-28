@@ -18,11 +18,10 @@
             <td>{{drink.price | currency}}</td>
             <td>{{drink.taste}}</td>
             <td><span class="badge bg-secondary" *ngIf="drink.stock==0">SIN STOCK</span></td>
-            <td><button class="btn btn-primary btn-sm" (click)="downQuantity(drink)">-</button>
-
-                <input type="text" [(ngModel)]="drink.quantity"
-                (keyup)="changeQuantity($event, drink)">
-                <button class="btn btn-primary btn-sm" (click)="upQuantity(drink)">+</button></td>
+            <td>
+                <app-input-integer [(quantity)]="drink.quantity" [max]="drink.stock" *ngIf="drink.stock" (maxReached)="maxReached($event)"></app-input-integer>
+            Cant: {{drink.quantity}}
+            </td>
         </tr>
        
     </tbody>
