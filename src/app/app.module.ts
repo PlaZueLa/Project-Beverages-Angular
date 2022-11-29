@@ -3,19 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DrinksListComponent } from './drinks-list/drinks-list.component';
+import { BeveragesListComponent } from './beverages-list/beverages-list.component';
 import { FormsModule } from '@angular/forms';
-import { BebidasAboutComponent } from './bebidas-about/bebidas-about.component';
-import { BebidasDrinksComponent } from './bebidas-drinks/bebidas-drinks.component';
+import { BeveragesAboutComponent } from './beverages-about/beverages-about.component';
+import { BeveragesDrinksComponent } from './beverages-drinks/beverages-drinks.component';
 import { CartComponent } from './cart/cart.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DrinksListComponent,
-    BebidasAboutComponent,
-    BebidasDrinksComponent,
+    BeveragesListComponent,
+    BeveragesAboutComponent,
+    BeveragesDrinksComponent,
     CartComponent,
     InputIntegerComponent
   ],

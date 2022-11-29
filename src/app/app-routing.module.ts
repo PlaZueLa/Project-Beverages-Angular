@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BebidasAboutComponent } from './bebidas-about/bebidas-about.component';
-import { BebidasDrinksComponent } from './bebidas-drinks/bebidas-drinks.component';
+import { BeveragesAboutComponent } from './beverages-about/beverages-about.component';
+import { BeveragesDrinksComponent } from './beverages-drinks/beverages-drinks.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'drinks',
+    redirectTo: 'beverages',
     pathMatch: 'full'
 
   },
   {
-    path: 'drinks',
-    component: BebidasDrinksComponent
+    path: 'beverages',
+    component: BeveragesDrinksComponent
   },
   {
     path: 'about',
-    component: BebidasAboutComponent
+    component: BeveragesAboutComponent
   },
 ];
 
