@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let beverage of beverages" [ngClass]="{'clearance': beverage.clearance}">
-            <td><img width="90" clas="img-thumbnail" [src]="beverage.image" [alt]="beverage.name"></td>
+            <td><img width="65" clas="img-thumbnail" [src]="beverage.image" [alt]="beverage.name"></td>
             <td>{{beverage.name}}</td>
             <td>{{beverage.type}}</td>
             <td>{{beverage.price | currency}}</td>
@@ -20,7 +20,7 @@
             <td><span class="badge bg-secondary" *ngIf="beverage.stock==0">SIN STOCK</span></td>
             <td>
                 <app-input-integer [(quantity)]="beverage.quantity" [max]="beverage.stock" *ngIf="beverage.stock" (maxReached)="maxReached($event)"></app-input-integer>
-            <button class="btn" (click)="addToCart(beverage)">Comprar</button>
+            <button class="btn" *ngIf="beverage.stock !=0" (click)="addToCart(beverage)">Comprar</button>
             </td>
         </tr>
        
