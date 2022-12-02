@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let beverage of beverages" [ngClass]="{'clearance': beverage.clearance}">
-            <td><img width="65" clas="img-thumbnail" [src]="beverage.image" [alt]="beverage.name"></td>
+            <td><img width="65" class="img-thumbnail" [src]="beverage.image" [alt]="beverage.name"></td>
             <td>{{beverage.name}}</td>
             <td>{{beverage.type}}</td>
             <td>{{beverage.price | currency}}</td>
