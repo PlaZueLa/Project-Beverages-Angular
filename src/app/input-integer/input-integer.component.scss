@@ -1,4 +1,17 @@
 input {
-    max-width: 40px;
+    max-width: 30px;
     text-align: center;
+    
+}
+
+.buttondown{
+background-color: red;
+}
+
+.buttonup{
+    background-color: lightgreen;
+}
+
+.btnbuy{
+    border: 1px solid black;
 }

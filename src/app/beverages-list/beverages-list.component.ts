@@ -9,6 +9,7 @@ import { Beverage } from './beverage'
 })
 export class BeveragesListComponent implements OnInit {
 
+  
   beverages: Beverage[] = [];
    
   constructor(
@@ -19,7 +20,9 @@ export class BeveragesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.beveragesDataService.getAll()
-    .subscribe(beverages => this.beverages = beverages);  
+    .subscribe(beverages => this.beverages = beverages); 
+    
+   
   }
 
   addToCart (beverage: Beverage): void {

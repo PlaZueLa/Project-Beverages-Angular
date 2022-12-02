@@ -20,7 +20,7 @@
             <td><span class="badge bg-secondary" *ngIf="beverage.stock==0">SIN STOCK</span></td>
             <td>
                 <app-input-integer [(quantity)]="beverage.quantity" [max]="beverage.stock" *ngIf="beverage.stock" (maxReached)="maxReached($event)"></app-input-integer>
-            <button class="btn" *ngIf="beverage.stock !=0" (click)="addToCart(beverage)">Comprar</button>
+            <button class="btnbuy" *ngIf="beverage.stock !=0" (click)="addToCart(beverage)">Comprar</button>
             </td>
         </tr>
        

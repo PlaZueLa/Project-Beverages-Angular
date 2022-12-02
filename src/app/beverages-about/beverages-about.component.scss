@@ -1,3 +1,26 @@
 body{
     background-color: antiquewhite;
 }
+
+h1, .info, .ubic, .contacto {
+    text-align: center;
+}
+
+img {
+ justify-content: center;
+}
+
+.info2{
+    display: flex;
+}
+
+.social{
+    border: 2px solid black;
+    font-size: 30px;
+    text-align: center;
+    height: 350px;
+}
+
+.contacto{
+    border:2px solid black;
+}
